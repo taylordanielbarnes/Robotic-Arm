@@ -52,6 +52,10 @@ void loop()
     //make sure the two sticks are unique
     if(leftValue == rightValue)
       leftValue++;
+
+    //keep it between 1 and 6
+    if(leftValue == 7)
+      leftValue = 1;
   }
 
   //check to see if the right button is pressed.
@@ -64,6 +68,10 @@ void loop()
     if(rightValue == 7)
       rightValue = 1;
 
+    //make sure the two sticks are unique
+    if(leftValue == rightValue)
+      rightValue++;
+      
     //make sure the two sticks are unique
     if(leftValue == rightValue)
       rightValue++;
