@@ -71,10 +71,10 @@ void loop()
     //make sure the two sticks are unique
     if(leftValue == rightValue)
       rightValue++;
-      
-    //make sure the two sticks are unique
-    if(leftValue == rightValue)
-      rightValue++;
+
+    //keep it between 1 and 6
+    if(rightValue == 7)
+      rightValue = 1;
   }
 
   //move a servo dependent on the left stick
